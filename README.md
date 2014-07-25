@@ -23,7 +23,7 @@ As you might have noticed, some of the feature names in the 561 feature vector a
 This function recieves a list of names and checks for duplicates. If duplicates are found, it will replace them with the same name added with a **"d"**. Notice that the function only does this once but if there are 3 same duplicates (hint: there is...) the function needs to be called again (like in build.tidy()) and thus the 3rd duplicate will appear as "name"+"dd"  (this could have been done in one function of course but I was lazy:)
 
 **build.tidy() continued**
-Now the function continues to reassign the names to both the Train and the Test data frames' columns and rbinds them together to create the "Complete" data.frame.
+Now the function continues to reassign the names to both the Train and the Test data frames' columns and rbinds them together to create the "Complete" data.frame. The only thing left to do is assigning the type of activities the subjects are doing by using the function  join(activity_labels,Complete,  by = "activity_id") from the plyr package.
 
 ##build.meantidy() -
 This function builds the final data frame that contains the independent tidy data set with the average of each variable for each activity and each subject that is asked for in the project.
